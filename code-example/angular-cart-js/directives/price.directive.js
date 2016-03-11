@@ -5,13 +5,11 @@
      * @name price
      * @desc Directive for formating the price
      */
-    angular.module('app')
+    angular.module('OrderFoodApp')
         .directive('price', function() {
             return {
                 restrict: 'E',
-                scope: {
-                    value: '='
-                },
+                scope: { value: '=' },
                 templateUrl: '../partials/price.html'
             }
         });

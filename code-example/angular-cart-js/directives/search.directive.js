@@ -5,7 +5,7 @@
      * @name searchForm
      * @desc Directive for the search form
      */
-    angular.module('app')
+    angular.module('OrderFoodApp')
         .directive('searchForm', function() {
             return {
                 restrict: 'E', 

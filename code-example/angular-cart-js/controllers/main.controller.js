@@ -2,13 +2,13 @@
     'use strict';
     
     /**
-     * @name MainCtrl
+     * @name MainController
      * @requires $http
-     * @desc MainCtrl for the app
+     * @desc MainController for the app
      */
-    MainCtrl.$injector = ['$http'];
+    MainController.$injector = ['$http'];
 
-    function MainCtrl($http) {
+    function MainController($http) {
         var vm = this;
         vm.search   = '';
         vm.articles = [];
@@ -18,6 +18,6 @@
         });
     };
 
-    angular.module('app')
-        .controller('MainCtrl', MainCtrl);
+    angular.module('OrderFoodApp')
+        .controller('MainController', MainController);
 })();

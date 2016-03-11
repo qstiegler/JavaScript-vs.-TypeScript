@@ -5,7 +5,7 @@
      * @name searchForm
      * @desc Directive for the article list
      */
-    angular.module('app')
+    angular.module('OrderFoodApp')
         .directive('articleList', function() {
             return {
                 restrict: 'E',
@@ -14,25 +14,25 @@
                     'search': '<'
                 },
                 templateUrl: '../partials/article-list.html',
-                controller: 'ArticleListCtrl',
+                controller: 'ArticleListController',
                 controllerAs: 'vm',
                 bindToController: true
             }
         });
 
     /**
-     * @name ArticleListCtrl
+     * @name ArticleListController
      * @desc Controller for `articleList` directive
      * @requires Cart
      */
-    ArticleListCtrl.$inject = ['Cart'];
+    ArticleListController.$inject = ['CartService'];
 
-    function ArticleListCtrl(Cart) {
+    function ArticleListController(CartService) {
         var vm = this;
-        vm.cart = Cart;
+        vm.cart = CartService;
     };
 
-    angular.module('app')
-        .controller('ArticleListCtrl', ArticleListCtrl); 
+    angular.module('OrderFoodApp')
+        .controller('ArticleListController', ArticleListController); 
 })();
 

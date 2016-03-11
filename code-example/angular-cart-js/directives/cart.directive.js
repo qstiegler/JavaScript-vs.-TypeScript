@@ -5,28 +5,28 @@
      * @name cart
      * @desc Directive for cart
      */   
-    angular.module('app')
+    angular.module('OrderFoodApp')
         .directive('cart', function() {
             return {
                 restrict: 'E',
                 templateUrl: '../partials/cart.html',
-                controller: 'CartCtrl',
+                controller: 'CartController',
                 controllerAs: 'vm'
             }
         });
     
     /**
-     * @name CartCtrl
+     * @name CartController
      * @desc Controller for `cart` directive
      * @requires Cart
      */
-    CartCtrl.$inject = ['Cart'];
+    CartController.$inject = ['CartService'];
     
-    function CartCtrl(Cart) {
+    function CartController(CartService) {
         var vm = this;
-        vm.cart = Cart;
+        vm.cart = CartService;
     };
         
-    angular.module('app')
-        .controller('CartCtrl', CartCtrl);
+    angular.module('OrderFoodApp')
+        .controller('CartController', CartController);
 })();

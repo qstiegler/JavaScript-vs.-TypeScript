@@ -2,11 +2,11 @@
     'use strict';
     
     /**
-     * @name Cart
-     * @desc Cart factory which handles all functionalities of the cart
+     * @name CartService
+     * @desc CartService factory which handles all functionalities of the cart
      */
-    angular.module('app')
-        .factory('Cart', function() {
+    angular.module('OrderFoodApp')
+        .factory('CartService', function() {
             var items = [];
 
             return {
