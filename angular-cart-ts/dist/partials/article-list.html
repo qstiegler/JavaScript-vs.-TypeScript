@@ -1,0 +1,15 @@
+<table class="table table-condenced">
+    <tr ng-repeat="article in vm.articles | filter:vm.search">
+        <td>{{article.id}}</td>
+        <td>{{article.name}}</td>
+        <td><price value="article.price" /></td>
+        <td class="text-right">
+            <button 
+                type="button" 
+                class="btn btn-default btn-xs" 
+                ng-click="vm.cart.addArticle(article);">
+                Add
+            </button>
+        </td>
+    </tr>
+</table>

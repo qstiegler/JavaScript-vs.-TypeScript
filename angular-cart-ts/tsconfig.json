@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "outFile": "dist/app.min.js"
+    },
+    "files": [
+        "src/models/article.model.ts",
+        "src/app.ts",
+        "src/services/cart.service.ts",
+        "src/controllers/main.controller.ts",
+        "src/directives/article-list.directive.ts",
+        "src/directives/cart.directive.ts",
+        "src/directives/price.directive.ts",
+        "src/directives/search.directive.ts"
+    ]
+}

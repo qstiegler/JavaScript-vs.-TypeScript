@@ -1,0 +1,12 @@
+<form>
+    <div class="form-group">
+        <input 
+            type="text" 
+            ng-model="search" 
+            class="form-control" 
+            placeholder="Search by">
+    </div>
+    <p ng-show="search">
+        You are currently searching for: {{ search }}
+    </p>
+</form>

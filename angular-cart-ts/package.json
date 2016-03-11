@@ -1,0 +1,25 @@
+{
+  "name": "angular-chart-ts",
+  "version": "0.0.1",
+  "author": "Quirin Stiegler",
+  "license": "Apache License Version 2.0",
+  "scripts": {
+    "tsd": "tsd",
+    "gulp": "gulp",
+    "postinstall": "tsd install && gulp default"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.11.0",
+    "gulp-uglify": "^1.5.3",
+    "tsd": "^0.6.5"
+  },
+  "devDependencies": {
+    "gulp-watch": "^4.3.5"
+  }
+}

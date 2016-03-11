@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <title>AngularJS Tutorial</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="OrderFoodApp" ng-controller="MainController as main">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>AngularJS cart</h1> 
+            <p>Written in ES5 JavaScript</p>   
+        </div>
+        
+        <search-form search="main.search"></search-form>
+        
+        <article-list articles="main.articles" search="main.search"></article-list>
+
+        <cart></cart>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="app.min.js"></script>
+</body>
+
+</html>

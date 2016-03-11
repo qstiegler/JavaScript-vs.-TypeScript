@@ -1,0 +1,21 @@
+<h2>Your cart</h2>
+<div ng-hide="vm.cart.getItems().length" class="alert alert-info">Your cart is empty.</div>
+<table ng-show="vm.cart.getItems().length" class="table">
+    <tr ng-repeat="item in vm.cart.getItems() track by $index" class="cart-item">
+        <td width="75%">{{ item.name }}</td>
+        <td width="20%" class="text-right">{{ item.price | currency }}</td>
+        <td width="5%" class="text-right">
+            <button 
+                type="button" 
+                class="btn btn-default btn-xs" 
+                ng-click="vm.cart.removeArticle(item);">
+                x
+            </button>
+        </td>
+    </tr>
+    <tr class="warning">
+        <td><strong>{{ vm.cart.getItems().length }} Articles</strong></td>
+        <td class="text-right"><strong>{{ vm.cart.sum() | currency }}</strong></td>
+        <td></td>
+    </tr>
+</table>
